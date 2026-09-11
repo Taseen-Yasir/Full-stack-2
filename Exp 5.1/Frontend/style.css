@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #6b7280;
+    font-size: 17px;
+}
+
+.student-info {
+    margin-top: 15px;
+    padding: 12px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.student-info p {
+    margin: 4px 0;
+    font-size: 16px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+button {
+    border: none;
+    padding: 11px 18px;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.clear-btn {
+    background: #6b7280;
+}
+
+.refresh-btn {
+    background: #059669;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th,
+td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+    background: #f3f4f6;
+}
+
+.action-btn {
+    margin-right: 8px;
+    padding: 7px 12px;
+}
+
+.edit-btn {
+    background: #f59e0b;
+}
+
+.delete-btn {
+    background: #dc2626;
+}
+
+#message {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.success {
+    color: #059669;
+}
+
+.error {
+    color: #dc2626;
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .table-header {
+        gap: 10px;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+}

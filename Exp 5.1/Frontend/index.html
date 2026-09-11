@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Experiment 5.1 - REST API User Management</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Experiment 5.1</h1>
+        <p>REST API User Management System</p>
+
+        <div class="student-info">
+            <p><strong>Name:</strong> Taseen Yasir Pritam</p>
+            <p><strong>UID:</strong> 24BAI70036</p>
+        </div>
+    </header>
+
+    <!-- Add / Update User -->
+    <section class="card">
+
+        <h2>User Management</h2>
+
+        <form id="userForm">
+
+            <div class="form-group">
+                <label for="uid">UID</label>
+                <input
+                    type="text"
+                    id="uid"
+                    placeholder="Enter UID"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter Name"
+                    required
+                >
+            </div>
+
+            <div class="buttons">
+
+                <button type="submit" id="submitBtn">
+                    Add User
+                </button>
+
+                <button
+                    type="button"
+                    id="clearBtn"
+                    class="clear-btn">
+                    Clear
+                </button>
+
+            </div>
+
+        </form>
+
+        <p id="message"></p>
+
+    </section>
+
+
+    <!-- User Records -->
+    <section class="card">
+
+        <div class="table-header">
+
+            <h2>User Records</h2>
+
+            <button
+                type="button"
+                id="refreshBtn"
+                class="refresh-btn">
+                Refresh Users
+            </button>
+
+        </div>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>UID</th>
+                        <th>Name</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="userTableBody">
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

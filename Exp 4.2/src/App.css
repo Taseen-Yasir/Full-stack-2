@@ -1,0 +1,658 @@
+/* ================= NAVBAR ================= */
+
+.navbar{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:30px 45px;
+
+background:linear-gradient(135deg,#4338CA,#312E81);
+
+color:white;
+
+box-shadow:0 6px 20px rgba(0,0,0,.15);
+
+margin-bottom:25px;
+
+}
+
+.headerLeft h1{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+font-size:38px;
+
+margin-bottom:10px;
+
+}
+
+.headerLeft p{
+
+font-size:16px;
+
+opacity:.9;
+
+max-width:650px;
+
+line-height:1.6;
+
+}
+
+.icon{
+
+font-size:34px;
+
+}
+
+.scheduleBtn{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:14px 24px;
+
+background:white;
+
+color:#4338CA;
+
+border:none;
+
+border-radius:10px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.scheduleBtn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 10px 20px rgba(0,0,0,.2);
+
+}
+
+@media(max-width:900px){
+
+.navbar{
+
+flex-direction:column;
+
+gap:20px;
+
+text-align:center;
+
+}
+
+.headerLeft h1{
+
+justify-content:center;
+
+font-size:30px;
+
+}
+
+}
+/* ================= DASHBOARD ================= */
+
+.dashboard{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:20px;
+
+padding:25px 35px;
+
+}
+
+.dashboardCard{
+
+background:white;
+
+border-radius:15px;
+
+padding:20px;
+
+display:flex;
+
+align-items:center;
+
+gap:18px;
+
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.dashboardCard:hover{
+
+transform:translateY(-5px);
+
+}
+
+.dashboardCard h4{
+
+color:#777;
+
+font-size:15px;
+
+margin-bottom:6px;
+
+}
+
+.dashboardCard h2{
+
+font-size:34px;
+
+color:#1E293B;
+
+}
+
+.cardIcon{
+
+width:55px;
+
+height:55px;
+
+border-radius:12px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:22px;
+
+}
+
+.purple{
+
+background:#EEF2FF;
+
+color:#4F46E5;
+
+}
+
+.blue{
+
+background:#E0F2FE;
+
+color:#0284C7;
+
+}
+
+.orange{
+
+background:#FEF3C7;
+
+color:#D97706;
+
+}
+
+.green{
+
+background:#DCFCE7;
+
+color:#16A34A;
+
+}
+
+@media(max-width:1000px){
+
+.dashboard{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:700px){
+
+.dashboard{
+
+grid-template-columns:1fr;
+
+padding:20px;
+
+}
+
+}
+/* ================= SEARCH BAR ================= */
+
+.searchBar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:20px 35px;
+
+}
+
+.searchBox{
+
+    flex:1;
+
+    display:flex;
+
+    align-items:center;
+
+    background:white;
+
+    border-radius:12px;
+
+    padding:14px 18px;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+
+}
+
+.searchIcon{
+
+    color:#6B7280;
+
+    margin-right:12px;
+
+}
+
+.searchBox input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    font-size:16px;
+
+    background:transparent;
+
+}
+
+.actionButtons{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.restoreBtn{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    background:#2563EB;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 18px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.restoreBtn:hover{
+
+    background:#1D4ED8;
+
+}
+
+.clearBtn{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    background:#DC2626;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 18px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.clearBtn:hover{
+
+    background:#B91C1C;
+
+}
+
+@media(max-width:900px){
+
+.searchBar{
+
+flex-direction:column;
+
+align-items:stretch;
+
+}
+
+.actionButtons{
+
+width:100%;
+
+justify-content:space-between;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.actionButtons{
+
+flex-direction:column;
+
+}
+
+.restoreBtn,
+.clearBtn{
+
+width:100%;
+justify-content:center;
+
+}
+
+}
+/* ================= CALENDAR ================= */
+
+.calendarContainer{
+
+    margin:25px 35px;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.fc-toolbar-title{
+
+    font-size:26px !important;
+
+    font-weight:700;
+
+    color:#1E293B;
+
+}
+
+.fc-button{
+
+    background:#4F46E5 !important;
+
+    border:none !important;
+
+    padding:8px 16px !important;
+
+}
+
+.fc-button:hover{
+
+    background:#3730A3 !important;
+
+}
+
+.fc-daygrid-day:hover{
+
+    background:#EEF2FF;
+
+}
+
+.fc-event{
+
+    border:none !important;
+
+    border-radius:8px !important;
+
+    padding:5px !important;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+.fc-event:hover{
+
+    transform:scale(1.03);
+
+    transition:.2s;
+
+}
+
+.fc-scrollgrid{
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+}
+
+.fc-col-header-cell{
+
+    background:#F8FAFC;
+
+}
+
+.fc-day-today{
+
+    background:#EEF2FF !important;
+
+}
+
+@media(max-width:768px){
+
+.calendarContainer{
+
+margin:20px;
+
+padding:15px;
+
+}
+
+.fc-toolbar{
+
+flex-direction:column !important;
+
+gap:15px;
+
+}
+
+}
+/* ================= MODAL ================= */
+
+.modalOverlay{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,.45);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:999;
+
+backdrop-filter:blur(4px);
+
+}
+
+.modal{
+
+background:white;
+
+width:420px;
+
+padding:30px;
+
+border-radius:18px;
+
+box-shadow:0 12px 30px rgba(0,0,0,.2);
+
+animation:popup .25s ease;
+
+}
+
+@keyframes popup{
+
+from{
+
+transform:scale(.8);
+
+opacity:0;
+
+}
+
+to{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+.modal h2{
+
+margin-bottom:20px;
+
+text-align:center;
+
+color:#1E293B;
+
+}
+
+.modal input,
+.modal select{
+
+width:100%;
+
+padding:14px;
+
+margin-bottom:16px;
+
+border:1px solid #D1D5DB;
+
+border-radius:10px;
+
+font-size:15px;
+
+outline:none;
+
+}
+
+.modalButtons{
+
+display:flex;
+
+gap:12px;
+
+}
+
+.saveBtn{
+
+flex:1;
+
+background:#2563EB;
+
+color:white;
+
+border:none;
+
+padding:12px;
+
+border-radius:10px;
+
+cursor:pointer;
+
+font-weight:bold;
+
+}
+
+.saveBtn:hover{
+
+background:#1D4ED8;
+
+}
+
+.cancelBtn{
+
+flex:1;
+
+background:#E5E7EB;
+
+border:none;
+
+padding:12px;
+
+border-radius:10px;
+
+cursor:pointer;
+
+font-weight:bold;
+
+}
+
+.cancelBtn:hover{
+
+background:#D1D5DB;
+
+}

@@ -1,0 +1,355 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    color:#1f2937;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 40px;
+    background:#1e293b;
+    color:white;
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.logo-icon{
+    color:#3b82f6;
+    animation:float 3s ease-in-out infinite;
+}
+
+.nav-links{
+    display:flex;
+    gap:20px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#60a5fa;
+}
+
+.user-section{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.user-details{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.logout-btn,
+.login-link{
+    background:#2563eb;
+    color:white;
+    padding:10px 18px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.logout-btn:hover,
+.login-link:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+/* ================= LOGIN ================= */
+
+.login-page{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:calc(100vh - 80px);
+    padding:40px;
+}
+
+.login-card{
+    width:420px;
+    background:white;
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+    animation:fadeUp .8s ease;
+}
+
+.lock-icon{
+    font-size:70px;
+    color:#2563eb;
+    display:block;
+    margin:0 auto 20px;
+    animation:float 3s ease-in-out infinite;
+}
+
+.login-card h2{
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.login-card p{
+    text-align:center;
+    color:#6b7280;
+    margin-bottom:20px;
+}
+
+.login-card input{
+    width:100%;
+    padding:14px;
+    margin:12px 0;
+    border:1px solid #d1d5db;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.password-box{
+    position:relative;
+}
+
+.password-box button{
+    position:absolute;
+    right:15px;
+    top:18px;
+    background:none;
+    border:none;
+    cursor:pointer;
+}
+
+.login-btn{
+    width:100%;
+    margin-top:15px;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(90deg,#2563eb,#3b82f6);
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.login-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 25px rgba(37,99,235,.3);
+}
+
+.error{
+    color:red !important;
+    margin-top:10px;
+    text-align:center;
+}
+
+/* ================= ROLE CARDS ================= */
+
+.roles{
+    display:flex;
+    justify-content:space-between;
+    margin-top:30px;
+}
+
+.role-card{
+    width:100px;
+    background:#f8fafc;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.role-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 12px 25px rgba(0,0,0,.15);
+}
+
+.role-icon{
+    font-size:35px;
+    color:#2563eb;
+    transition:.4s;
+}
+
+.role-card:hover .role-icon{
+    transform:rotate(15deg) scale(1.2);
+}
+
+/* ================= DEMO ================= */
+
+.demo{
+    margin-top:30px;
+    padding:15px;
+    background:#eff6ff;
+    border-radius:12px;
+}
+
+.demo h4{
+    margin-bottom:10px;
+}
+
+.demo p{
+    text-align:left;
+    margin:6px 0;
+}
+
+/* ================= DASHBOARD ================= */
+
+.dashboard{
+    padding:50px;
+}
+
+.hero{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    color:#6b7280;
+}
+
+.card-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:25px;
+}
+
+.dashboard-card{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.12);
+    transition:.35s;
+}
+
+.dashboard-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(37,99,235,.18);
+}
+
+.dashboard-icon{
+    font-size:50px;
+    color:#2563eb;
+    margin-bottom:20px;
+    transition:.4s;
+}
+
+.dashboard-card:hover .dashboard-icon{
+    transform:rotate(15deg) scale(1.15);
+}
+
+/* ================= UNAUTHORIZED ================= */
+
+.unauthorized{
+    min-height:80vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.warning-icon{
+    font-size:80px;
+    color:#ef4444;
+    margin-bottom:20px;
+}
+
+.back-btn{
+    margin-top:25px;
+    padding:12px 24px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    background:#1d4ed8;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+.navbar{
+    flex-direction:column;
+    gap:15px;
+}
+
+.roles{
+    flex-direction:column;
+    gap:15px;
+}
+
+.role-card{
+    width:100%;
+}
+
+.login-card{
+    width:100%;
+}
+
+}

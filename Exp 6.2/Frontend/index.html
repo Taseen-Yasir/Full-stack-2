@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Experiment 6.2</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <div class="header">
+
+        <h1>Experiment 6.2</h1>
+
+        <p class="subtitle">
+            Caching &amp; Query Optimization
+        </p>
+
+        <div class="student-info">
+            <strong>Name:</strong> Taseen Yasir Pritam
+            <span>|</span>
+            <strong>UID:</strong> 24BAI70036
+        </div>
+
+    </div>
+
+
+    <!-- Add User -->
+    <div class="card">
+
+        <h2>Add User</h2>
+
+        <form id="userForm">
+
+            <div class="form-row">
+
+                <input
+                    type="text"
+                    id="uid"
+                    placeholder="UID"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Name"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="city"
+                    placeholder="City"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="country"
+                    placeholder="Country"
+                    required
+                >
+
+                <button
+                    type="submit"
+                    class="btn btn-add"
+                >
+                    Add User
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+
+    <!-- Query Optimization Tests -->
+    <div class="card">
+
+        <h2>Query Optimization Tests</h2>
+
+        <div class="button-row">
+
+            <button
+                class="btn btn-normal"
+                onclick="runQuery('normal')"
+            >
+                Normal Query
+            </button>
+
+            <button
+                class="btn btn-join"
+                onclick="runQuery('optimized')"
+            >
+                JOIN FETCH
+            </button>
+
+            <button
+                class="btn btn-cache"
+                onclick="runQuery('cached')"
+            >
+                Cached Query
+            </button>
+
+            <button
+                class="btn btn-native"
+                onclick="runQuery('native')"
+            >
+                Native SQL
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Sort Users -->
+    <div class="card">
+
+        <h2>Sort Users</h2>
+
+        <div class="button-row">
+
+            <button
+                class="btn btn-sort-id"
+                onclick="sortUsers('id')"
+            >
+                Sort by ID
+            </button>
+
+            <button
+                class="btn btn-sort-name"
+                onclick="sortUsers('name')"
+            >
+                Sort by Name
+            </button>
+
+            <button
+                class="btn btn-refresh"
+                onclick="loadUsers()"
+            >
+                Refresh
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Result Message -->
+    <div
+        id="resultMessage"
+        class="result-message"
+    >
+    </div>
+
+
+    <!-- User List -->
+    <div class="card">
+
+        <h2>User List</h2>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>ID</th>
+                        <th>UID</th>
+                        <th>Name</th>
+                        <th>City</th>
+                        <th>Country</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="userTableBody">
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

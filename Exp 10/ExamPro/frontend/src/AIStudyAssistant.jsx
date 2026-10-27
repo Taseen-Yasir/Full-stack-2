@@ -21,7 +21,8 @@ import {
 } from "lucide-react";
 import "./AIStudyAssistant.css";
 
-// Set VITE_API_URL in Vercel to your deployed API URL ending in /api.
+// Configure VITE_API_URL in Vercel to your deployed API URL,
+// ending in /api. Local development uses localhost.
 const API = (
   import.meta.env.VITE_API_URL ||
   "http://localhost:5000/api"
@@ -52,9 +53,8 @@ export default function AIStudyAssistant({
   initialTopic,
 }) {
   const [topic, setTopic] = useState(
-  initialTopic || "IPv4 addressing and subnetting"
-);
-  
+    initialTopic || "IPv4 addressing and subnetting"
+  );
   const [difficulty, setDifficulty] = useState("beginner");
   const [count, setCount] = useState("5");
   const [timeLimit, setTimeLimit] = useState("0");
@@ -90,6 +90,7 @@ export default function AIStudyAssistant({
     : undefined;
 
   const answeredCount = Object.keys(answers).length;
+
   const unansweredCount = Math.max(
     0,
     questions.length - answeredCount
@@ -182,7 +183,6 @@ export default function AIStudyAssistant({
     }
 
     finishLock.current = true;
-
     recordCurrentQuestionTime();
 
     if (practiceStartedAt.current) {
@@ -197,8 +197,8 @@ export default function AIStudyAssistant({
     setSubmitted(true);
   }
 
-  // Keep the overall stopwatch accurate, even if the browser tab
-  // is temporarily inactive.
+  // Keep the overall stopwatch accurate, including when the
+  // browser tab is temporarily inactive.
   useEffect(() => {
     if (!practiceSet || completed) {
       return undefined;
@@ -228,7 +228,7 @@ export default function AIStudyAssistant({
     return () => window.clearInterval(interval);
   }, [practiceSet, completed]);
 
-  // End timed practice when its deadline has passed.
+  // End timed practice when the deadline has passed.
   useEffect(() => {
     if (
       practiceSet &&
@@ -238,6 +238,7 @@ export default function AIStudyAssistant({
     ) {
       finishPractice();
     }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [practiceSet, timeLeft, completed]);
 
@@ -252,9 +253,11 @@ export default function AIStudyAssistant({
       answers[currentIndex] !== undefined
     ) {
       questionStartedAt.current = null;
+
       setQuestionElapsed(
         timeTakenRef.current[currentIndex] || 0
       );
+
       return undefined;
     }
 
@@ -364,7 +367,7 @@ export default function AIStudyAssistant({
     } catch (err) {
       setError(
         err instanceof TypeError
-          ? "Cannot connect to ExamPro. Check that the backend is running."
+          ? "Cannot connect to ExamPro. Check the backend URL and server status."
           : err.message
       );
     } finally {
@@ -437,14 +440,17 @@ export default function AIStudyAssistant({
 
       if (!response.ok) {
         throw new Error(
-          data.message ||
-            "Could not generate an explanation."
+          data.message || "Could not generate an explanation."
         );
       }
 
       setAiExplanation(data.explanation);
     } catch (err) {
-      setError(err.message);
+      setError(
+        err instanceof TypeError
+          ? "Cannot connect to ExamPro. Check the backend URL and server status."
+          : err.message
+      );
     } finally {
       setExplanationLoading(false);
     }
@@ -812,6 +818,7 @@ export default function AIStudyAssistant({
               <div className="ai-performance-card">
                 <div className="ai-performance-heading">
                   <Gauge size={21} />
+
                   <div>
                     <h3>Your performance</h3>
                     <p>
@@ -915,6 +922,7 @@ export default function AIStudyAssistant({
                 }
               >
                 <ListChecks size={18} />
+
                 {showReview
                   ? "Hide question review"
                   : "Review all questions"}
@@ -1078,8 +1086,10 @@ export default function AIStudyAssistant({
                 <div className="ai-options-list">
                   {question.options.map((option, index) => {
                     const isSelected = selectedOption === index;
+
                     const isCorrect =
                       index === question.correctOption;
+
                     const showFeedback =
                       selectedOption !== undefined;
 

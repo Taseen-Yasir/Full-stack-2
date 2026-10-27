@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import {
@@ -12,6 +11,13 @@ import {
   Moon,
 } from "lucide-react";
 import "./Auth.css";
+
+// Local development uses localhost.
+// Production uses the VITE_API_URL environment variable.
+const API_BASE = (
+  import.meta.env.VITE_API_URL ||
+  "http://localhost:5000/api"
+).replace(/\/+$/, "");
 
 export default function Auth({
   onAuthenticated,
@@ -32,10 +38,11 @@ export default function Auth({
     setLoading(true);
 
     try {
+      const endpoint =
+        mode === "login" ? "login" : "register";
+
       const response = await fetch(
-        `http://localhost:5000/api/auth/${
-          mode === "login" ? "login" : "register"
-        }`,
+        `${API_BASE}/auth/${endpoint}`,
         {
           method: "POST",
           headers: {
@@ -77,7 +84,7 @@ export default function Auth({
     } catch (err) {
       setError(
         err instanceof TypeError
-          ? "Cannot connect to ExamPro. Make sure the backend is running."
+          ? "Cannot connect to ExamPro. Check the backend URL and server status."
           : err.message
       );
     } finally {

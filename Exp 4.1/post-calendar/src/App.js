@@ -73,7 +73,7 @@ function App() {
 
           <h3>Name</h3>
 
-          <p>Pritam</p>
+          <p>Taseen Yasir Pritam</p>
 
         </div>
 

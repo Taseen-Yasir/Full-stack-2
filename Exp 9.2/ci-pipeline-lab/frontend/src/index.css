@@ -1,0 +1,31 @@
+:root {
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+  color: #202d43;
+  background: #f3f6fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  color: #233d70;
+  background: #dce8ff;
+}
